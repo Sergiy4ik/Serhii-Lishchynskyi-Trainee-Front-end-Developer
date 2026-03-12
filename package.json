@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Serhii-Lishchynskyi-Trainee-Front-end-Develope/",
+    "build": "vite build --base=/Serhii-Lishchynskyi-Trainee-Front-end-Developer/",
     "preview": "vite preview"
   },
   "devDependencies": {
