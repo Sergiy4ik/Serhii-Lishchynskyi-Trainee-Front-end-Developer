@@ -1,128 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/vanilla-app-template/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
-  </head>
-  <body>
-    <header class="header">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanilla App Template</title>
+  <script type="module" crossorigin src="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/styles-CBaHTAAW.css">
+</head>
+
+<body>
+  <header class="header">
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+        G&G
       </a>
-      <ul class="nav-list">
+      <ul class="nav-list hiden">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+          <a class="nav-link" href="./page-2.html">Про гурт</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+          <a class="nav-link" href="#concerts-page">Концерти</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page-2.html">Галерея</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page-3.html">Контакти</a>
         </li>
       </ul>
+
+      <button type="button" class="burger-button" data-menu-open>
+        <svg class="burger-button-icon" width="32" height="32">
+          <use href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/sprite-DTMiJgLf.svg#menu"></use>
+        </svg>
+      </button>
     </nav>
   </div>
 </header>
 
+  <main>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/vanilla-app-template/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
+    <section id="hero-section" class="hero-page">
+      <div class="container">
+        <h1 class="hero-title">Гурт «Грим та Грім»</h1>
+        <p class="hero-subtitle">Справжній український рок, який гуркоче в серці.</p>
+        <p class="hero-descr">«Грим та Грім» — це поєднання <span class="hero-descr-span">потужних</span> гітарних
+          рифів, чесних текстів і вибухової енергії
+          сцени. Ми граємо для тих, хто
+          цінує живий звук, свободу та силу музики.</p>
+        <p class="hero-subdescr"><span class="hero-descr-span">Наші концерти</span> — це завжди контакт з залом, драйв і
+          емоції. Приєднуйся до нас на
+          найближчих виступах і відчуй цей саунд
+          наживо!</p>
+
+        <div class="hero-button-wraper">
+          <button type="button" class="hero-button">Замовити квиток</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="concerts-section" class="concerts-page">
+      <div class="container">
+        <h2 class="concerts-title">Найближчі концерти</h2>
+
+        <table class="concerts-table">
+          <thead>
+            <tr>
+              <th>Місто / Заклад</th>
+              <th>К-сть місць</th>
+              <th>Дата і час</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td data-label="Місто / Заклад">Київ — Docker-G Pub</td>
+              <td data-label="К-сть місць">250</td>
+              <td data-label="Дата і час">25.10.2025, 19:00</td>
+              <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
+            </tr>
+
+            <tr>
+              <td data-label="Місто / Заклад">Львів — FESTrepublic</td>
+              <td data-label="К-сть місць">400</td>
+              <td data-label="Дата і час">01.11.2025, 20:00</td>
+              <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
+            </tr>
+
+            <tr>
+              <td data-label="Місто / Заклад">Одеса — Зелен театр</td>
+              <td data-label="К-сть місць">700</td>
+              <td data-label="Дата і час">09.11.2025, 19:30</td>
+              <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
+            </tr>
+
+            <tr>
+              <td data-label="Місто / Заклад">Харків — ArtZavod</td>
+              <td data-label="К-сть місць">500</td>
+              <td data-label="Дата і час">16.11.2025, 19:00</td>
+              <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <section id="group-member-section">
+      <div class="conteiner">
+        <h2></h2>
+
+        <ul class="group-member-list">
+          <li class="group-item">
+            <div class="group-item-conteiner">
+              <img class="group-img" src="https://cdn.pixabay.com/photo/2023/06/25/10/35/ai-generated-8086991_640.jpg"
+                alt="G&G member - guitar" width="360" height="200">
+              <p class="member-name"> Максим - гітара</p>
+            </div>
+          </li>
+
+          <li class="group-item">
+            <div class="group-item-conteiner">
+              <img class="group-img" src="https://cdn.pixabay.com/photo/2024/05/05/19/33/ai-generated-8741799_640.png"
+                alt="G&G member - vocals" width="360" height="200">
+              <p class="member-name">Олена - вокал</p>
+            </div>
+          </li>
+
+          <li class="group-item">
+            <div class="group-item-conteiner">
+              <img class="group-img" src="https://cdn.pixabay.com/photo/2024/08/28/19/39/ai-generated-9004962_1280.jpg"
+                alt="G&G member - drummers" width="360" height="200">
+              <p class="member-name"> Тарас - барабанни</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="group-history">
+      <div class="container">
+        <h2 class="group-history-title">Наша історія</h2>
+
+        <p class="group-history-descr">«Грим та Грім» народився з бажання створювати музику, яка відчувається серцем. Ми
+          почали свій шлях у
+          маленькій студії в
+          центрі Києва, де кожен акорд, кожне слово було наповнене емоціями та переживаннями. Це було місце, де
+          народжувались наші
+          перші пісні, де ми вчились грати разом як єдиний організм.
+          <span class="group-history-span">
+            За роки нашої діяльності ми виступили на десятках сцен, від невеликих клубів до великих Фестивалів. Наша
+            музика - це
+            поєднання традиційного року з сучасними елементами, що робить її унікальною та впізнаваною. Ми не боїмось
+            експериментувати з звуком, додаючи електронні елементи або народні інструменти.
+          </span>
+        </p>
+
+        <p class="group-history-span">
+          Кожен наш виступ - це не просто концерт, а справжня подія, де ми ділимося своєю енергією з глядачами та
+          створюємо
+          неповторну атмосферу. Ми віримо, що музика має силу об'єднувати людей, створювати спільноти та надихати на
+          зміни.
+
+          Наш колектив складається з досвідчених музикантів, кожен з яких привносить свій унікальний стиль та бачення.
+          Максим
+          створює неймовірні гітарні рифи, Олена зачаровує своїм вокалом, а Тарас тримає ритм, який змушує серця
+          битися
+          в унісон з
+          музикою.
+        </p>
+
+
+        <img class="group-history-img hiden"
+          src="https://media.istockphoto.com/id/1461816749/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BD%D0%B0%D1%82%D0%BE%D0%B2%D0%BF-%D0%BB%D1%8E%D0%B4%D0%B5%D0%B9-%D0%B7-%D0%BF%D1%96%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%BC%D0%B8-%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8-%D0%BF%D1%96%D0%B4-%D1%87%D0%B0%D1%81-%D0%BC%D1%83%D0%B7%D0%B8%D1%87%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D1%80%D1%82%D1%83-%D0%B7-%D0%B4%D0%B8%D0%B2%D0%BE%D0%B2%D0%B8%D0%B6%D0%BD%D0%B8%D0%BC-%D1%81%D0%B2%D1%96%D1%82%D0%BB%D0%BE%D0%B2%D0%B8%D0%BC-%D1%88%D0%BE%D1%83-%D1%87%D0%BE%D1%80%D0%BD%D1%96.jpg?s=612x612&w=0&k=20&c=04JyHNvCDMgXTNmjdbgvqMVHsFy3OgjxBvktwquQoAY="
+          alt="Photos from our concert">
+      </div>
+    </section>
+
+    <section id="contacts-form">
+      <div class="container">
+
+        <h2 class="contacts-title">Зв'яжись з нами</h2>
+        <p class="contacts-subtitle">
+          Хочеш заказати виступ або маєш питання? Пиши!
+        </p>
+
+        <div class="contacts-wrapper">
+
+          <!-- FORM -->
+          <form class="contacts-form">
+
+            <div class="contacts-form-row">
+
+              <div class="contacts-form-container">
+                <label class="contacts-form-label" for="user-name">Ім'я</label>
+                <input class="contacts-form-input" type="text" id="user-name">
+              </div>
+
+              <div class="contacts-form-container">
+                <label class="contacts-form-label" for="user-email">Email</label>
+                <input class="contacts-form-input" type="text" id="user-email">
+              </div>
+
+            </div>
+
+            <div class="contacts-form-container full">
+              <label class="contacts-form-label" for="user-notice">Повідомлення</label>
+              <textarea class="contacts-form-input textarea" id="user-notice"></textarea>
+            </div>
+
+            <button class="contacts-form-submit-btn" type="submit">
+              Відправити
+            </button>
+
+          </form>
+
+
+          <!-- MAP -->
+          <div class="contacts-map">
+
+            <h3 class="map-title">Наше місцезнаходження</h3>
+
+            <iframe src="https://www.google.com/maps?q=Kyiv&output=embed" loading="lazy">
+            </iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container footer-container">
+
+    <!-- Ліва частина -->
+    <div class="footer-left">
+      <p class="footer-copy">
+        © 2025 «Грім та Грім». Всі права захищені.
+      </p>
+
+      <p class="footer-contacts">
+        <a href="mailto:booking@lotoplay" class="footer-link">
+          booking@lotoplay
+        </a>
+        <span class="footer-separator">·</span>
+        <a href="tel:+380991234567" class="footer-link">
+          +38 (099) 123-45-67
+        </a>
+      </p>
     </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
 
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
+    <!-- Права частина -->
+    <div class="footer-right">
+      <a href="#" class="footer-social">Instagram</a>
+      <span class="footer-separator">·</span>
+      <a href="#" class="footer-social">YouTube</a>
+      <span class="footer-separator">·</span>
+      <a href="#" class="footer-social">Facebook</a>
+    </div>
 
-    </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
   </div>
 </footer>
 
+</body>
 
-  </body>
 </html>

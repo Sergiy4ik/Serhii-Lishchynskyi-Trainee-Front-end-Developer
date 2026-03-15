@@ -5,29 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 3</title>
-    <link rel="stylesheet" crossorigin href="/vanilla-app-template/assets/styles-DvPDDfy5.css">
+    <link rel="stylesheet" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/styles-CBaHTAAW.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <nav class="nav">
       <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/vanilla-app-template/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
+        G&G
       </a>
-      <ul class="nav-list">
+      <ul class="nav-list hiden">
         <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+          <a class="nav-link" href="./page-2.html">Про гурт</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="./page-3.html">Page 3</a>
+          <a class="nav-link" href="#concerts-page">Концерти</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page-2.html">Галерея</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page-3.html">Контакти</a>
         </li>
       </ul>
+
+      <button type="button" class="burger-button" data-menu-open>
+        <svg class="burger-button-icon" width="32" height="32">
+          <use href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/sprite-DTMiJgLf.svg#menu"></use>
+        </svg>
+      </button>
     </nav>
   </div>
 </header>
-
 
     <main>
       <div class="container">
@@ -40,20 +49,35 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer-container">
+
+    <!-- Ліва частина -->
+    <div class="footer-left">
+      <p class="footer-copy">
+        © 2025 «Грім та Грім». Всі права захищені.
+      </p>
+
+      <p class="footer-contacts">
+        <a href="mailto:booking@lotoplay" class="footer-link">
+          booking@lotoplay
+        </a>
+        <span class="footer-separator">·</span>
+        <a href="tel:+380991234567" class="footer-link">
+          +38 (099) 123-45-67
+        </a>
+      </p>
+    </div>
+
+    <!-- Права частина -->
+    <div class="footer-right">
+      <a href="#" class="footer-social">Instagram</a>
+      <span class="footer-separator">·</span>
+      <a href="#" class="footer-social">YouTube</a>
+      <span class="footer-separator">·</span>
+      <a href="#" class="footer-social">Facebook</a>
+    </div>
+
   </div>
 </footer>
-
   </body>
 </html>
