@@ -1,0 +1,136 @@
+.concerts-page {
+  padding: 48px 0;
+}
+
+.concerts-title {
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #111827;
+  border-radius: 10px;
+  color: #e5e7eb;
+  padding: 12px;
+  margin: 8px 0;
+  text-align: center;
+}
+
+.concerts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.concerts-table thead {
+  display: none;
+}
+
+.concerts-table tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.concerts-table tr {
+  display: flex;
+  flex-direction: column;
+  background: #111827;
+  border: 1px solid #2a3446;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.concerts-table td {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  color: #e5e7eb;
+}
+
+.concerts-table td::before {
+  content: attr(data-label);
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.concerts-button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #ff2d55;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.concerts-button:hover {
+  transform: scale(1.02);
+  background-color: #e0264a;
+}
+
+@media (min-width: 768px) {
+  .concerts-title {
+    text-align: left;
+    font-size: 24px;
+    padding: 20px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .concerts-table {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .concerts-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .concerts-table tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+  }
+
+  .concerts-table tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+  }
+
+  .concerts-table thead {
+    display: table-header-group;
+  }
+
+  .concerts-table tbody {
+    display: table-row-group;
+  }
+
+  .concerts-table tr {
+    display: table-row;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .concerts-table td,
+  .concerts-table th {
+    display: table-cell;
+    padding: 18px 20px;
+    border-top: 1px solid #2a3446;
+  }
+
+  .concerts-table th {
+    text-align: left;
+    color: #9ca3af;
+    font-weight: 600;
+    background: #111827;
+  }
+
+  .concerts-table td::before {
+    display: none;
+  }
+
+  .concerts-button {
+    width: auto;
+    padding: 10px 18px;
+    margin: 0;
+  }
+}
+.concerts-table tbody tr:hover {
+  background: #1a2333;
+}

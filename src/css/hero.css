@@ -1,0 +1,96 @@
+/* Mobile screen start */
+
+/* Hero section start */
+
+#hero-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://img.freepik.com/premium-photo/rock-music-concert-background-illustration-ai-generativexa_118124-24006.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 48px 0;
+}
+
+.hero-title {
+  padding: 28px 0 24px 0;
+  font-size: 24px;
+  font-weight: 800;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle,
+.hero-descr,
+.hero-subdescr {
+  color: #e5e7eb;
+}
+
+.hero-subtitle {
+  margin-bottom: 24px;
+  font-size: 16px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-descr {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.hero-descr-span {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.hero-subdescr {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.hero-button {
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin: 0 auto;
+  background-color: #ffd500;
+  padding: 12px;
+  color: #000;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  box-shadow: 0 6px 20px rgba(255, 213, 0, 0.45);
+  transition: 0.2s;
+}
+
+.hero-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(255, 213, 0, 0.6);
+}
+
+.hero-button-wraper {
+  padding-bottom: 28px;
+}
+
+/* Mobile screen end */
+
+/* Desctop screen start */
+
+@media only screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-button {
+    font-size: 18px;
+  }
+
+  .hero-button {
+    margin: 0;
+  }
+}
+
+/* Desctop screen end */
+
+/* Hero section end */
