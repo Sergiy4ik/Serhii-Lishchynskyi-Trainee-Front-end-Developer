@@ -1,0 +1,104 @@
+/* ===== BACKDROP ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s ease;
+  z-index: 1000;
+}
+
+/* активний стан */
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== MODAL BOX ===== */
+.modal-content {
+  background-color: #111827;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  padding: 24px;
+  position: relative;
+
+  transform: translateY(20px);
+  transition: 0.25s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* анімація появи */
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+/* ===== CLOSE BUTTON ===== */
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  color: #ff2f56;
+}
+
+/* ===== TITLE ===== */
+.modal-content h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ===== FORM ===== */
+#ticketForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* inputs */
+#ticketForm input {
+  padding: 12px 14px;
+  background-color: #cbd5e1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#ticketForm input:focus {
+  border-color: #ff2f56;
+}
+
+/* ===== BUTTON ===== */
+#ticketForm button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff2f56;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#ticketForm button:hover {
+  background: #ff2f56;
+}
+
+/* optional: disable scroll when modal open */
+body.modal-open {
+  overflow: hidden;
+}

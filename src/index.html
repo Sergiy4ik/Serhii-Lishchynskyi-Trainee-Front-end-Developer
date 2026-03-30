@@ -28,7 +28,7 @@
           наживо!</p>
 
         <div class="hero-button-wraper">
-          <button type="button" class="hero-button">Замовити квиток</button>
+          <a href="#concerts-section" class="hero-button">Замовити квиток</a>
         </div>
       </div>
     </section>
@@ -48,28 +48,28 @@
           </thead>
 
           <tbody>
-            <tr>
+            <tr class="ticketPopup">
               <td data-label="Місто / Заклад">Київ — Docker-G Pub</td>
               <td data-label="К-сть місць">250</td>
               <td data-label="Дата і час">25.10.2025, 19:00</td>
               <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
             </tr>
 
-            <tr>
+            <tr class="ticketPopup">
               <td data-label="Місто / Заклад">Львів — FESTrepublic</td>
               <td data-label="К-сть місць">400</td>
               <td data-label="Дата і час">01.11.2025, 20:00</td>
               <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
             </tr>
 
-            <tr>
+            <tr class="ticketPopup">
               <td data-label="Місто / Заклад">Одеса — Зелен театр</td>
               <td data-label="К-сть місць">700</td>
               <td data-label="Дата і час">09.11.2025, 19:30</td>
               <td data-label=""><button class="concerts-button">Замовити квиток</button></td>
             </tr>
 
-            <tr>
+            <tr class="ticketPopup">
               <td data-label="Місто / Заклад">Харків — ArtZavod</td>
               <td data-label="К-сть місць">500</td>
               <td data-label="Дата і час">16.11.2025, 19:00</td>
@@ -170,19 +170,21 @@
 
               <div class="contacts-form-container">
                 <label class="contacts-form-label" for="user-name">Ім'я</label>
-                <input class="contacts-form-input" type="text" id="user-name">
+                <input class="contacts-form-input" type="text" id="user-name" placeholder="Ваше ім’я" required>
               </div>
 
               <div class="contacts-form-container">
                 <label class="contacts-form-label" for="user-email">Email</label>
-                <input class="contacts-form-input" type="text" id="user-email">
+                <input class="contacts-form-input" type="text" id="user-email" placeholder="yourname@gmail.com"
+                  required>
               </div>
 
             </div>
 
             <div class="contacts-form-container full">
               <label class="contacts-form-label" for="user-notice">Повідомлення</label>
-              <textarea class="contacts-form-input textarea" id="user-notice"></textarea>
+              <textarea class="contacts-form-input textarea" id="user-notice" placeholder="Повідомлення"
+                required></textarea>
             </div>
 
             <button class="contacts-form-submit-btn" type="submit">
@@ -211,7 +213,29 @@
 
   <load src="./partials/footer.html" />
 
-  <script type="module" src="./main.js"></script>
+  <div class="modal" id="ticketModal">
+    <div class="modal-content">
+      <span class="modal-close">x</span>
+
+      <h3>Замовлення квитка</h3>
+
+      <form id="ticketForm" method="GET" action="/" novalidate>
+
+        <input type="hidden" name="city" id="selectedCity">
+
+        <input type="text" name="user-name" placeholder="Ваше ім’я" required>
+        <input type="email" name="user-email" placeholder="Email" required>
+        <input type="tel" name="user-phone" placeholder="Телефон" required>
+
+        <button type="submit" class="concerts-button">
+          Відправити
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

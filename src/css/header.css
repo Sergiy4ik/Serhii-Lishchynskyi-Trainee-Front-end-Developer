@@ -26,6 +26,15 @@
   outline: none;
 }
 
+.burger-button-icon {
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.burger-button-icon:hover {
+  color: #9ca3af;
+}
+
 .nav-link {
   position: relative;
   display: block;
