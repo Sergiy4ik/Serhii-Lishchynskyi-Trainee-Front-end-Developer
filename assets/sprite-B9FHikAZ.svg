@@ -1,7 +1,7 @@
 <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="menu">
-      <path d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z" fill="#fff"></path>
+      <path d="M4 6H20V8H4V6ZM4 11H20V13H4V11ZM4 16H20V18H4V16Z" fill="currentColor"></path>
     </symbol>
   </defs>
 </svg>
