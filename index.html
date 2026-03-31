@@ -9,7 +9,7 @@
   <script type="module" crossorigin src="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/index.js"></script>
   <link rel="modulepreload" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/vendor-I1I71QQ2.js">
   <link rel="stylesheet" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/vendor-DnveWo0P.css">
-  <link rel="stylesheet" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/index-6XlNjnlT.css">
+  <link rel="stylesheet" crossorigin href="/Serhii-Lishchynskyi-Trainee-Front-end-Developer/assets/index-du-GsAhH.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
           <a class="nav-link" href="#group-member-section">Галерея</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contacts-form">Контакти</a>
+          <a class="nav-link" href="#contacts-form-section">Контакти</a>
         </li>
       </ul>
 
@@ -40,6 +40,18 @@
         </svg>
       </button>
     </nav>
+
+    <div class="mobile-menu" data-menu>
+      <div class="mobile-menu-content">
+        <button class="menu-close" data-menu-close>✕</button>
+
+        <a class="mobile-menu-link" href="#group-history">Про гурт</a>
+        <a class="mobile-menu-link" href="#concerts-section">Концерти</a>
+        <a class="mobile-menu-link" href="#group-member-section">Галерея</a>
+        <a class="mobile-menu-link" href="#contacts-form-section">Контакти</a>
+      </div>
+    </div>
+
   </div>
 </header>
 
@@ -115,7 +127,7 @@
 
     <section id="group-member-section">
       <div class="conteiner">
-        <h2></h2>
+        <h2 class="group-member-title">Учасники гурту</h2>
 
         <ul class="group-member-list">
           <li class="group-item">
@@ -184,7 +196,7 @@
       </div>
     </section>
 
-    <section id="contacts-form">
+    <section id="contacts-form-section">
       <div class="container">
 
         <h2 class="contacts-title">Зв'яжись з нами</h2>
@@ -195,18 +207,18 @@
         <div class="contacts-wrapper">
 
           <!-- FORM -->
-          <form class="contacts-form">
+          <form class="contacts-form" id="contactsForm" method="GET" action="/" novalidate>
 
             <div class="contacts-form-row">
 
               <div class="contacts-form-container">
                 <label class="contacts-form-label" for="user-name">Ім'я</label>
-                <input class="contacts-form-input" type="text" id="user-name" placeholder="Ваше ім’я" required>
+                <input class="contacts-form-input" type="text" name="user-name" placeholder="Ваше ім’я" required>
               </div>
 
               <div class="contacts-form-container">
                 <label class="contacts-form-label" for="user-email">Email</label>
-                <input class="contacts-form-input" type="text" id="user-email" placeholder="yourname@gmail.com"
+                <input class="contacts-form-input" type="text" name="user-email" placeholder="yourname@gmail.com"
                   required>
               </div>
 
@@ -214,7 +226,7 @@
 
             <div class="contacts-form-container full">
               <label class="contacts-form-label" for="user-notice">Повідомлення</label>
-              <textarea class="contacts-form-input textarea" id="user-notice" placeholder="Повідомлення"
+              <textarea class="contacts-form-input textarea" name="user-notice" placeholder="Повідомлення"
                 required></textarea>
             </div>
 
@@ -276,7 +288,7 @@
 
   <div class="modal" id="ticketModal">
     <div class="modal-content">
-      <span class="modal-close">x</span>
+      <span class="modal-close">✕</span>
 
       <h3>Замовлення квитка</h3>
 
