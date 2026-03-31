@@ -4,6 +4,15 @@
   box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.3);
 }
 
+.group-member-title {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #e5e7eb;
+}
+
 .group-member-list {
   display: flex;
   flex-direction: column;

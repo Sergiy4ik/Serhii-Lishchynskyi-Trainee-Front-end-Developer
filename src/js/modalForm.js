@@ -10,22 +10,28 @@ const modalClose = document.querySelector(".modal-close");
 concertsButton.forEach(btn => {
   btn.addEventListener("click", () => {
     modal.classList.add("active");
+    document.body.classList.add("modal-open");
   });
 });
 
-modalClose.addEventListener("click", () => {
+function closeModal() {
   modal.classList.remove("active")
+  document.body.classList.remove("modal-open")
+}
+
+modalClose.addEventListener("click", () => {
+  closeModal()
 })
 
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
-    modal.classList.remove("active")
+    closeModal()
   }
 })
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    modal.classList.remove("active")
+    closeModal()
   }
 })
 
@@ -38,7 +44,7 @@ form.addEventListener("submit", function (e) {
   const email = formData.get(("user-email") || "").trim();
   const phone = formData.get(("user-phone") || "").trim();
 
-  if (name.length === 0) {
+  if (!name) {
     iziToast.error({
       title: "Помилка валідації",
       message: "Введіть своє ім'я",
@@ -80,4 +86,12 @@ form.addEventListener("submit", function (e) {
     })
     return;
   }
+
+  iziToast.success({
+    title: "Вітаємо!",
+    message: "Ваш білет заброньовано",
+    position: "topCenter"
+  })
+
+  form.reset()
 })
