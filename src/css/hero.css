@@ -1,7 +1,3 @@
-/* Mobile screen start */
-
-/* Hero section start */
-
 #hero-section {
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -17,6 +13,7 @@
   font-size: 24px;
   font-weight: 800;
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  color: #e5e7eb;
 }
 
 .hero-subtitle,
@@ -74,10 +71,6 @@
   padding-bottom: 28px;
 }
 
-/* Mobile screen end */
-
-/* Desctop screen start */
-
 @media only screen and (min-width: 1200px) {
   .hero-title {
     font-size: 32px;
@@ -91,7 +84,3 @@
     justify-content: center;
   }
 }
-
-/* Desctop screen end */
-
-/* Hero section end */

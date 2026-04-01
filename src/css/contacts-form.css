@@ -85,6 +85,7 @@
 .map-title {
   text-align: center;
   margin-bottom: 15px;
+  color: #e5e7eb;
 }
 
 .contacts-map iframe {
@@ -94,17 +95,11 @@
   border-radius: 10px;
 }
 
-/* Tablet screen start */
-
 @media only screen and (min-width: 768px) {
   .contacts-form-row {
     display: flex;
   }
 }
-
-/* Tablet screen end */
-
-/* Desctop screen start */
 
 @media only screen and (min-width: 1200px) {
   .contacts-wrapper {
@@ -117,5 +112,3 @@
     font-size: 18px;
   }
 }
-
-/* Desctop screen end */

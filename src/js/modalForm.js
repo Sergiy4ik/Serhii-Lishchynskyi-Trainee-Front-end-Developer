@@ -1,5 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import { getRequest } from "./getRequest";
 
 
 const form = document.getElementById("ticketForm");
@@ -30,7 +31,9 @@ modal.addEventListener("click", (e) => {
 })
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
+  if (e.key === "Escape" && modal?.classList.contains("active")) {
+    console.log(e.key);
+
     closeModal()
   }
 })
@@ -40,9 +43,9 @@ form.addEventListener("submit", function (e) {
 
   const formData = new FormData(form);
 
-  const name = formData.get(("user-name") || "").trim();
-  const email = formData.get(("user-email") || "").trim();
-  const phone = formData.get(("user-phone") || "").trim();
+  const name = (formData.get("user-name") || "").trim();
+  const email = (formData.get("user-email") || "").trim();
+  const phone = (formData.get("user-phone") || "").trim();
 
   if (!name) {
     iziToast.error({
@@ -60,7 +63,7 @@ form.addEventListener("submit", function (e) {
     return
   }
 
-  if (!email.includes("@")) {
+  if (!email.includes("@") || !email.includes(".")) {
     iziToast.error({
       title: "Помилка валідації",
       message: "Введіть свою коректну електронну адресу",
@@ -93,5 +96,6 @@ form.addEventListener("submit", function (e) {
     position: "topCenter"
   })
 
-  form.reset()
-})
+  getRequest({ name, email, phone, form })
+}
+)

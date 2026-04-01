@@ -18,7 +18,7 @@ closeBtn.addEventListener("click", () => {
 })
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
+  if (e.key === "Escape" && menu?.classList.contains("active")) {
     closeModal()
   }
 

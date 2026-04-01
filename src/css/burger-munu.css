@@ -1,4 +1,3 @@
-/* ===== MOBILE MENU ===== */
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -19,7 +18,6 @@
   visibility: visible;
 }
 
-/* контент */
 .mobile-menu-content {
   background: #111827;
   padding: 40px;
@@ -40,9 +38,7 @@
   transform: translateY(0);
 }
 
-/* посилання */
 .mobile-menu-content a {
-  font-size: 18px;
   text-decoration: none;
   color: #fff;
   font-size: 32px;
@@ -54,7 +50,6 @@
   color: #ff2d55;
 }
 
-/* кнопка закриття */
 .menu-close {
   position: absolute;
   top: 20px;
@@ -71,12 +66,10 @@
   color: #ff2d55;
 }
 
-/* блок скролу */
 .modal-open {
   overflow: hidden;
 }
 
-/* ===== адаптив ===== */
 @media (min-width: 768px) {
   .burger-button {
     display: none;

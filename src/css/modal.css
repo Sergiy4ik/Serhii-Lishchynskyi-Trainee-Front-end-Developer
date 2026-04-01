@@ -1,4 +1,3 @@
-/* ===== BACKDROP ===== */
 .modal {
   position: fixed;
   inset: 0;
@@ -13,13 +12,11 @@
   z-index: 1000;
 }
 
-/* активний стан */
 .modal.active {
   opacity: 1;
   visibility: visible;
 }
 
-/* ===== MODAL BOX ===== */
 .modal-content {
   background-color: #111827;
   width: 100%;
@@ -33,12 +30,10 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-/* анімація появи */
 .modal.active .modal-content {
   transform: translateY(0);
 }
 
-/* ===== CLOSE BUTTON ===== */
 .modal-close {
   position: absolute;
   top: 12px;
@@ -53,21 +48,19 @@
   color: #ff2f56;
 }
 
-/* ===== TITLE ===== */
 .modal-content h3 {
   margin-bottom: 16px;
   font-size: 20px;
   text-align: center;
+  color: #cbd5e1;
 }
 
-/* ===== FORM ===== */
 #ticketForm {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-/* inputs */
 #ticketForm input {
   padding: 12px 14px;
   background-color: #cbd5e1;
@@ -82,7 +75,6 @@
   border-color: #ff2f56;
 }
 
-/* ===== BUTTON ===== */
 #ticketForm button {
   padding: 12px;
   border: none;
@@ -98,7 +90,6 @@
   background: #ff2f56;
 }
 
-/* optional: disable scroll when modal open */
 body.modal-open {
   overflow: hidden;
 }

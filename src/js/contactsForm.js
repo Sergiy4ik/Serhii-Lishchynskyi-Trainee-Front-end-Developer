@@ -1,5 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
+import { sendToTelegram } from "./telegram";
 
 const form = document.getElementById("contactsForm");
 
@@ -9,9 +10,9 @@ if (form) {
 
     const formData = new FormData(form);
 
-    const name = formData.get("user-name") || "".trim();
-    const email = formData.get("user-email") || "".trim();
-    const notice = formData.get(("user-notice") || "").trim();
+    const name = (formData.get("user-name") || "").trim();
+    const email = (formData.get("user-email") || "").trim();
+    const notice = (formData.get("user-notice") || "").trim();
 
     if (!name) {
       iziToast.error({
@@ -29,7 +30,7 @@ if (form) {
       return
     };
 
-    if (!email.includes("@")) {
+    if (!email.includes("@") || !email.includes(".")) {
       iziToast.error({
         title: "Помилка валідації",
         message: "Введіть свою коректну електронну адресу",
@@ -46,6 +47,8 @@ if (form) {
       })
       return
     }
+
+    sendToTelegram(name)
 
     iziToast.success({
       title: "Ваше повідомлення отримано",
