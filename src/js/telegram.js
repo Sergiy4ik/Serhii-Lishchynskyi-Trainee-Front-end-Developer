@@ -25,7 +25,3 @@ export async function sendToTelegram(name) {
     console.error(error);
   }
 }
-console.log("TOKEN:", import.meta.env.VITE_TOKEN);
-console.log("CHAT_ID:", import.meta.env.VITE_CHAT_ID);
-console.log("ENV TEST:", import.meta.env);
-console.log("TOKEN LENGTH:", import.meta.env.VITE_TOKEN?.length);
